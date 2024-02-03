@@ -1,0 +1,28 @@
+import math
+while True:
+    variables = ["+","-","*","/","^","root","!","√"]
+    variable = input("Insert a variable: +, -, *, /, ^, √ or root, !: ")
+    if variable == "!":
+        num1 = float(input("Enter a number: "))
+        print(math.factorial(int(num1)))
+    if variable == "^":
+        num1 = int(input("Enter the base: "))
+        num2 = int(input("Enter the exponent: "))
+        print(num1 ** num2)
+    if variable == "√" or variable == "root":
+        num1 = int(input("Enter the base: "))
+        num2 = int(input("Enter the root: "))
+        print(num1 ** (1/num2))
+    if variable == "+" or variable == "-" or variable == "*" or variable == "/":
+        num1 = float(input("Insert first number: "))
+        num2 = float(input("Insert second number: "))
+    if variable == "+":
+        print(num1 + num2)
+    if variable == "-":
+        print(num1 - num2)
+    if variable == "*":
+        print(num1 * num2)
+    if variable == "/":
+        print(num1 / num2)
+    if variable not in variables:
+        print("you fucked something up. try again")
